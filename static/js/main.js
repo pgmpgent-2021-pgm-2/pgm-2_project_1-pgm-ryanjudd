@@ -1,13 +1,13 @@
-const WEATHER_API = 'http://api.weatherapi.com/v1/current.json?key=4f49bbe7048d41d7b12142024202112&q=Ghent';
+// const WEATHER_API = 'http://api.weatherapi.com/v1/current.json?key=4f49bbe7048d41d7b12142024202112&q=Ghent';
 const COVID_API = 'https://data.stad.gent/api/records/1.0/search/?dataset=dataset-of-cumulative-number-of-confirmed-cases-by-municipality&q=';
 
 (() => {
     const app = {
         initialize() {
             this.cacheElements();
-            this.fetchWeather();
             this.fetchGhentCovidPositiveCases();
             this.fetchGHUsers();
+            this.test();
         },
 
         cacheElements() {
@@ -16,14 +16,14 @@ const COVID_API = 'https://data.stad.gent/api/records/1.0/search/?dataset=datase
             this.$githubContainer = document.querySelector('.github-container')
         },
 
-        async fetchWeather() {
-            try {
-                const response = await fetch(WEATHER_API);
-                const json = await response.json();
-                this.updateWeather(json);
-            } catch (error) {
-                console.error(error);
-            }
+        test(json) {
+            // console.log(hey);
+            console.log(WeatherApi().getCurrentWeather());
+            this.updateWeather(WeatherApi());
+            console.log(this.getCurrentWeather);
+            
+            
+            // console.log(test);
         },
 
         updateWeather(weather) {
