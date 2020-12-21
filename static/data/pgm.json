@@ -1,0 +1,121 @@
+[
+  {
+    "name": "Ryan",
+    "familyName": "Judd",
+    "email": "ryan.random@random.com",
+    "thumbnail": "string to thumbnail here",
+    "lifeMotto": "random string here",
+    "portfolio": {
+      "githubUsername": "pgm-ryanjudd",
+      "linkedInUsername": "Ryan Judd"
+    },
+    "Student": true,
+    "Birthday": 922143600
+  },
+
+  {
+    "name": "Bram",
+    "familyName": "Criel",
+    "email": "bram.random@random.com",
+    "thumbnail": "string to thumbnail here",
+    "lifeMotto": "random string here",
+    "portfolio": {
+      "githubUsername": "pgm-bramcriel",
+      "linkedInUsername": "Bram Criel"
+    },
+    "Student": true,
+    "Birthday": 922143600
+  },
+
+  {
+    "name": "Silke",
+    "familyName": "Van Meerbeek",
+    "email": "silke.random@random.com",
+    "thumbnail": "string to thumbnail here",
+    "lifeMotto": "random string here",
+    "portfolio": {
+      "githubUsername": "pgm-silke",
+      "linkedInUsername": "Silke"
+    },
+    "Student": true,
+    "Birthday": 922143600
+  },
+  {
+    "name": "Philipe",
+    "familyName": "De Pauw",
+    "email": "philipe.random@random.com",
+    "thumbnail": "string to thumbnail here",
+    "lifeMotto": "random string here",
+    "portfolio": {
+      "githubUsername": "pgm-philipe",
+      "linkedInUsername": "Philipe De Pauw"
+    },
+    "Student": true,
+    "Birthday": 922143600
+  },
+  {
+    "name": "Mathiu",
+    "familyName": "Judd",
+    "email": "ryan.random@random.com",
+    "thumbnail": "string to thumbnail here",
+    "lifeMotto": "random string here",
+    "portfolio": {
+      "githubUsername": "pgm-ryanjudd",
+      "linkedInUsername": "Ryan Judd"
+    },
+    "Student": true,
+    "Birthday": 922143600
+  },
+  {
+    "name": "Ryan",
+    "familyName": "Judd",
+    "email": "ryan.random@random.com",
+    "thumbnail": "string to thumbnail here",
+    "lifeMotto": "random string here",
+    "portfolio": {
+      "githubUsername": "pgm-ryanjudd",
+      "linkedInUsername": "Ryan Judd"
+    },
+    "Student": true,
+    "Birthday": 922143600
+  },
+  {
+    "name": "Ryan",
+    "familyName": "Judd",
+    "email": "ryan.random@random.com",
+    "thumbnail": "string to thumbnail here",
+    "lifeMotto": "random string here",
+    "portfolio": {
+      "githubUsername": "pgm-ryanjudd",
+      "linkedInUsername": "Ryan Judd"
+    },
+    "Student": true,
+    "Birthday": 922143600
+  },
+  {
+    "name": "Ryan",
+    "familyName": "Judd",
+    "email": "ryan.random@random.com",
+    "thumbnail": "string to thumbnail here",
+    "lifeMotto": "random string here",
+    "portfolio": {
+      "githubUsername": "pgm-ryanjudd",
+      "linkedInUsername": "Ryan Judd"
+    },
+    "Student": true,
+    "Birthday": 922143600
+  },
+  {
+    "name": "Ryan",
+    "familyName": "Judd",
+    "email": "ryan.random@random.com",
+    "thumbnail": "string to thumbnail here",
+    "lifeMotto": "random string here",
+    "portfolio": {
+      "githubUsername": "pgm-ryanjudd",
+      "linkedInUsername": "Ryan Judd"
+    },
+    "Student": true,
+    "Birthday": 922143600
+  }
+]
