@@ -1,0 +1,30 @@
+$colour1: #121212;
+$colour2: #292929;
+$colour3: #616161;
+$colour4: #BB86FC;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $colour1;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  background: $colour2;
+  padding: 1rem;
+}
+
+.covid-container {
+  width: 100%;
+  font-size: 1.2rem;
+}
