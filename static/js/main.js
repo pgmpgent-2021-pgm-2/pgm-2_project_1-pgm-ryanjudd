@@ -1,5 +1,3 @@
-const WEATHER_API = 'http://api.weatherapi.com/v1/current.json?key=4f49bbe7048d41d7b12142024202112&q=Ghent';
-const COVID_API = 'https://data.stad.gent/api/records/1.0/search/?dataset=dataset-of-cumulative-number-of-confirmed-cases-by-municipality&q=';
 
 // test = WeatherApi().getCurrentWeather();
 // console.log(test); // undefined
@@ -8,9 +6,9 @@ const COVID_API = 'https://data.stad.gent/api/records/1.0/search/?dataset=datase
   const app = {
     initialize() {
       this.cacheElements();
-      this.fetchGhentCovidPositiveCases();
       this.fetchGHUsers();
       this.WeatherFromServices();
+      this.CovidFromServices();
     },
 
     cacheElements() {
@@ -20,14 +18,7 @@ const COVID_API = 'https://data.stad.gent/api/records/1.0/search/?dataset=datase
     },
 
     async WeatherFromServices() {
-      // console.log(hey);
-      // console.log(test.current.temp_c);
-      // console.log(test.getCurrentWeather());
-      // fetch(WEATHER_API)
-      //   .then(response => response.json())
-      //   .then(data => this.updateWeather(data));
-
-      const ei = await WeatherApi();
+      const ei = await WeatherApi('Ghent');
 
       this.updateWeather(ei)
 
@@ -41,17 +32,14 @@ const COVID_API = 'https://data.stad.gent/api/records/1.0/search/?dataset=datase
       this.$weatherContainer.innerHTML = `<h3>${weather.current.temp_c} °C</h3> <img src="${weather.current.condition.icon}" alt="">`;
     },
 
-    async fetchGhentCovidPositiveCases() {
-      try {
-        const response = await fetch(COVID_API);
-        const json = await response.json();
-        this.updateGhentCovidPositiveCases(json);
-      } catch (error) {
-        console.error(error);
-      }
+    async CovidFromServices() {
+      const covid = await CovidApi();
+
+      this.updateGhentCovidPositiveCases(covid);
     },
 
-    updateGhentCovidPositiveCases: function (cases) {
+    updateGhentCovidPositiveCases(cases) {
+      console.log(cases);
       this.$covidContainer.innerHTML = `<h3>${cases.records[0].fields.cases}</h3>`
     },
 
