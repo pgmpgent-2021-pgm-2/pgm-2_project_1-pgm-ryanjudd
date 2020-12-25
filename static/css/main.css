@@ -16,15 +16,112 @@ main {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 2rem;
 }
 
 header {
   background: #292929;
   padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .covid-container {
-  width: 100%;
   font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.covid-container h3 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.weather-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.weather-container h3 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.github-container {
+  width: 15%;
+  border: #292929 solid 0.2rem;
+}
+
+.json-user-container {
+  border-top: #292929 solid 0.2rem;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.json-user-container:first-child {
+  border-top: none;
+}
+
+.github-search-container {
+  width: 60%;
+  background: #292929;
+  margin-left: 2rem;
+}
+
+.right-side {
+  background-color: #292929;
+  margin-left: 2rem;
+  width: 20%;
+}
+
+.right-side-wrapper {
+  margin: .5rem;
+}
+
+#gh-search {
+  width: 100%;
+  padding: .5rem;
+  text-align: center;
+}
+
+#gh-submit {
+  width: 100%;
+  border: none;
+  background-color: #BB86FC;
+  margin-top: .2rem;
+  border-radius: .1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  cursor: pointer;
+}
+
+.gh-users-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: .5rem;
+  border: #616161 0.1rem solid;
+  border-radius: .1rem;
+  cursor: pointer;
+}
+
+.gh-user--img {
+  width: 3rem;
+  margin-right: .5rem;
 }
 /*# sourceMappingURL=main.css.map */

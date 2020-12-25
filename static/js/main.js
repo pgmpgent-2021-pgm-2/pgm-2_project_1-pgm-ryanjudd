@@ -6,36 +6,32 @@
   const app = {
     initialize() {
       this.cacheElements();
-      this.fetchGHUsers();
-      this.WeatherFromServices();
-      this.CovidFromServices();
+      this.loadServices();
+      this.onClickEvents();
     },
 
     cacheElements() {
       this.$weatherContainer = document.querySelector('.weather-container');
       this.$covidContainer = document.querySelector('.covid-container');
       this.$githubContainer = document.querySelector('.github-container');
+      this.$ghSearchResult = document.querySelector('.gh-search-result');
+      this.$ghInput = document.querySelector('#gh-search');
+      this.$ghSubmit = document.querySelector('#gh-submit');
     },
 
-    async WeatherFromServices() {
-      const ei = await WeatherApi('Ghent');
+    async loadServices() {
+      const weather = await WeatherApi('Ghent');
+      this.updateWeather(weather);
 
-      this.updateWeather(ei)
+      const covid = await CovidApi();
+      this.updateGhentCovidPositiveCases(covid);
 
-      let b = 5;
-      let c = simpleMath()+b;
-      console.log(c);
+      const GH = await GHUsers();
+      this.updateGHUsersList(GH);
     },
 
     updateWeather(weather) {
-      console.log(weather);
       this.$weatherContainer.innerHTML = `<h3>${weather.current.temp_c} °C</h3> <img src="${weather.current.condition.icon}" alt="">`;
-    },
-
-    async CovidFromServices() {
-      const covid = await CovidApi();
-
-      this.updateGhentCovidPositiveCases(covid);
     },
 
     updateGhentCovidPositiveCases(cases) {
@@ -43,26 +39,46 @@
       this.$covidContainer.innerHTML = `<h3>${cases.records[0].fields.cases}</h3>`
     },
 
-    async fetchGHUsers() {
-      try {
-        const response = await fetch('./static/data/pgm.json');
-        const json = await response.json();
-        this.updateGHUsersList(json);
-      } catch (error) {
-        console.error(error);
-      }
-    },
-
     updateGHUsersList(users) {
       let str = '';
       users.forEach(user => {
-        str += `
+        str += `<div class="json-user-container">
         <p>${user.portfolio.githubUsername}</p>
         <p>${user.name} ${user.familyName}</p>
-        `;
+        </div>`;
       });
       this.$githubContainer.innerHTML = str;
+    },
+
+    async onClickEvents() {
+      this.$ghSubmit.addEventListener("click", async () => {
+        this.ghSearchFromServices(await GithubApi(await this.$ghInput.value))
+      });
+    },
+
+    ghSearchFromServices(github) {
+      let str = "";
+      for (let i = 0; i < 10; i++) {
+        const element = github.items[i];
+
+        str += `<div class="gh-users-container">
+        <img src="${element.avatar_url}" alt="" class="gh-user--img">
+        <p>${element.login}</p>
+        </div>`;
+      }
+
+      this.$ghSearchResult.innerHTML = str;
+
+      this.onClickGhDetail();
+    },
+
+    onClickGhDetail() {
+      this.$ghUsersContainer = document.querySelectorAll('.gh-users-container');
+
+      console.log('onClickGhDetail is on!');
+      console.log(this.$ghUsersContainer);
     }
+
   }
   app.initialize();
 })()

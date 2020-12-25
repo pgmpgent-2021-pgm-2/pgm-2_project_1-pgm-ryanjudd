@@ -9,15 +9,31 @@
 </head>
 <body>
     <header>
-        <article class="covid-container"></article>
+        <div class="covid-container"></div>
+        <div class="weather-container"></div>
     </header>
 
     <main>
-        <article class="weather-container"></article>
         <article class="github-container"></article>
-    
-        <script src="./static/js/services.js"></script>
-        <script src="./static/js/main.js"></script>
+        <article class="github-search-container"></article>
+        <article class="right-side">
+            <div class="right-side-wrapper">
+                <!-- <form action=""> --> <!-- form resets page and prevents data loading -->
+                    <input id="gh-search" type="text" placeholder="Search for users"> 
+                    <button id="gh-submit">Send</button>
+                <!-- </form> -->
+                <div class="gh-search-result">
+
+                </div>
+            </div>
+        </article>
+
+        <article class="github-repository-container"></article>
+        <article class="github-followers-container"></article>
+        
     </main>
+    
+    <script src="./static/js/services.js"></script>
+    <script src="./static/js/main.js"></script>
 </body>
 </html>
