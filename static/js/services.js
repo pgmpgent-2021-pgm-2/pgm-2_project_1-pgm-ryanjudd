@@ -13,7 +13,7 @@ async function WeatherApi(city) {
 };
 
 async function GHUsers() {
-  const GHU = 'static/data/pgm.json';
+  const GHU = './static/data/pgm.json';
 
   try {
     const response = await fetch(GHU);
