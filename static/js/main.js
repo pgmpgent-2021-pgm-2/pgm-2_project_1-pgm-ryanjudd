@@ -19,6 +19,9 @@
       this.$citySearch = document.querySelector('#city-search');
       this.$citySend = document.querySelector('#city-send');
       this.$youtubeSearch = document.querySelector('#youtube-search');
+      this.$themeSwap = document.querySelector('#theme-swap-button');
+      this.$body = document.querySelector('body');
+      this.$rightSide = document.querySelector('.right-side')
       
     },
 
@@ -134,7 +137,9 @@
         this.updateUTCTime(await this.$citySearch.value);
       });
 
-
+      this.$themeSwap.addEventListener("click", () => {
+        this.swapThemes();
+      })
     },
 
     ghSearchFromServices(github) {
@@ -211,6 +216,21 @@
       this.$timeWrapper.innerHTML = `<h3>${time.toUTCString()}</h3>`;
       
     },
+
+    swapThemes() {
+
+      if (this.$body.classList.contains('light-body')) {
+        this.$body.classList.remove('light-body');
+        this.$githubContainer.classList.remove('light');
+        this.$rightSide.classList.remove('light');
+        this.$ghCenter.classList.remove('light');
+      } else {
+        this.$body.classList.add('light-body');
+        this.$githubContainer.classList.add('light');
+        this.$rightSide.classList.add('light')
+        this.$ghCenter.classList.add('light');
+      }
+    }
   }
   app.initialize();
 })()

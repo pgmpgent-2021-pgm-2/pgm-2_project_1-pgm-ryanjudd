@@ -3,6 +3,7 @@ $colour2: #292929;
 $colour3: #616161;
 $colour4: #BB86FC;
 $colour5: #f0f0f0dd;
+$colour6: #ffffff43;
 
 * {
   margin: 0;
@@ -10,7 +11,7 @@ $colour5: #f0f0f0dd;
   box-sizing: border-box;
 }
 
-html {
+body {
   background-color: $colour1;
   color: #fff;
 }
@@ -169,4 +170,21 @@ header {
     color: #fff;
     text-decoration: $colour3;
   }
+}
+
+.light-body {
+  background-color: $colour5;
+  color: #000;
+}
+
+.light {
+  background-color: $colour6;
+
+  a {
+    color: #000;
+  }
+}
+
+header {
+  color: #fff;
 }

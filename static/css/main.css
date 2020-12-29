@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-html {
+body {
   background-color: #121212;
   color: #fff;
 }
@@ -191,5 +191,22 @@ header {
   color: #fff;
   -webkit-text-decoration: #616161;
           text-decoration: #616161;
+}
+
+.light-body {
+  background-color: #f0f0f0dd;
+  color: #000;
+}
+
+.light {
+  background-color: #ffffff43;
+}
+
+.light a {
+  color: #000;
+}
+
+header {
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
