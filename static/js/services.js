@@ -48,21 +48,20 @@ async function GithubApi(name) {
   }
 };
 
-async function GithubRepositoryApi() {
-  const REPOSITORY_API = `https://api.github.com/users/%24%7Busername%7D/repos?page=1&per_page=50`;
+async function GithubRepositoryApi(name) {
+  const REPOSITORY_API = `https://api.github.com/users/${name}/repos?page=1&per_page=1`;
 
   try {
     const response = await fetch(REPOSITORY_API);
     json = await response.json();
-    console.log(json);
     return json;
   } catch (error) {
     console.error(error);
   }
 };
 
-async function GithubFollowersApi() {
-  const FOLLOWERS_API = `https://api.github.com/users/%24%7Busername%7D/repos?page=1&per_page=50`;
+async function GithubFollowersApi(name) {
+  const FOLLOWERS_API = `https://api.github.com/users/${name}/followers?page=1&per_page=1`;
 
   try {
     const response = await fetch(FOLLOWERS_API);

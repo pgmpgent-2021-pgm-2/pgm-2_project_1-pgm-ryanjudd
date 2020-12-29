@@ -2,6 +2,7 @@ $colour1: #121212;
 $colour2: #292929;
 $colour3: #616161;
 $colour4: #BB86FC;
+$colour5: #f0f0f0dd;
 
 * {
   margin: 0;
@@ -31,6 +32,7 @@ header {
 .covid-container {
   font-size: 1.2rem;
   display: flex;
+
   h3 {
     align-self: center;
   }
@@ -39,6 +41,7 @@ header {
 .weather-container {
   display: flex;
   flex-wrap: wrap;
+
   h3 {
     align-self: center;
   }
@@ -46,36 +49,35 @@ header {
 
 .github-container {
   width: 15%;
-  border: $colour2 solid .2rem;  
+  background-color: $colour2;
+  border: $colour3 solid .2rem;
+  height: 71vh;
 }
 
 .json-user-container {
-  border-top: $colour2 solid .2rem;
+  border-top: $colour3 solid .2rem;
   text-align: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  margin-top: .2rem;
 }
 
 .json-user-container:first-child {
   border-top: none;
 }
 
-.github-search-container {
+.github-center {
   width: 60%;
   background: $colour2;
   margin-left: 2rem;
+  height: 78vh;
 }
 
 .right-side {
   background-color: $colour2;
   margin-left: 2rem;
   width: 20%;
-
-  // form {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   margin: .3rem;
-  // }
+  height: 78vh;
 }
 
 .right-side-wrapper {
@@ -83,13 +85,13 @@ header {
 }
 
 #gh-search {
-  width: 100%;
+  width: 70%;
   padding: .5rem;
   text-align: center;
 }
 
 #gh-submit {
-  width: 100%;
+  width: 28%;
   border: none;
   background-color: $colour4;
   margin-top: .2rem;
@@ -102,7 +104,7 @@ header {
 .gh-users-container {
   display: flex;
   flex-wrap: wrap;
-  margin-top: .5rem;
+  margin-top: .7rem;
   border: $colour3 .1rem solid;
   border-radius: .1rem;
   cursor: pointer;
@@ -111,4 +113,60 @@ header {
 .gh-user--img {
   width: 3rem;
   margin-right: .5rem;
+}
+
+.gh-user-info {
+  margin: 1rem;
+
+  img {
+    width: 6rem;
+  }
+}
+
+.gh-user-repos-follow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.repos {
+  margin: 1rem;
+  width: 45%;
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    overflow-y: scroll;
+    height: 50vh;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: $colour3;
+  }
+}
+
+.follows {
+  margin: 1rem;
+  width: 45%;
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    overflow-y: scroll;
+    height: 50vh;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: $colour3;
+  }
 }

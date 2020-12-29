@@ -61,30 +61,35 @@ header {
 
 .github-container {
   width: 15%;
-  border: #292929 solid 0.2rem;
+  background-color: #292929;
+  border: #616161 solid 0.2rem;
+  height: 71vh;
 }
 
 .json-user-container {
-  border-top: #292929 solid 0.2rem;
+  border-top: #616161 solid 0.2rem;
   text-align: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  margin-top: .2rem;
 }
 
 .json-user-container:first-child {
   border-top: none;
 }
 
-.github-search-container {
+.github-center {
   width: 60%;
   background: #292929;
   margin-left: 2rem;
+  height: 78vh;
 }
 
 .right-side {
   background-color: #292929;
   margin-left: 2rem;
   width: 20%;
+  height: 78vh;
 }
 
 .right-side-wrapper {
@@ -92,13 +97,13 @@ header {
 }
 
 #gh-search {
-  width: 100%;
+  width: 70%;
   padding: .5rem;
   text-align: center;
 }
 
 #gh-submit {
-  width: 100%;
+  width: 28%;
   border: none;
   background-color: #BB86FC;
   margin-top: .2rem;
@@ -114,7 +119,7 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: .5rem;
+  margin-top: .7rem;
   border: #616161 0.1rem solid;
   border-radius: .1rem;
   cursor: pointer;
@@ -123,5 +128,68 @@ header {
 .gh-user--img {
   width: 3rem;
   margin-right: .5rem;
+}
+
+.gh-user-info {
+  margin: 1rem;
+}
+
+.gh-user-info img {
+  width: 6rem;
+}
+
+.gh-user-repos-follow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.repos {
+  margin: 1rem;
+  width: 45%;
+}
+
+.repos h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.repos ul {
+  overflow-y: scroll;
+  height: 50vh;
+}
+
+.repos a {
+  color: #fff;
+  -webkit-text-decoration: #616161;
+          text-decoration: #616161;
+}
+
+.follows {
+  margin: 1rem;
+  width: 45%;
+}
+
+.follows h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.follows ul {
+  overflow-y: scroll;
+  height: 50vh;
+}
+
+.follows a {
+  color: #fff;
+  -webkit-text-decoration: #616161;
+          text-decoration: #616161;
 }
 /*# sourceMappingURL=main.css.map */

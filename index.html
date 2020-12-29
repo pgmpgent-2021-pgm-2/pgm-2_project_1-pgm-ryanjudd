@@ -10,18 +10,24 @@
 <body>
     <header>
         <div class="covid-container"></div>
+        <div class="time-container">
+            <input class="header-search" id="city-search" type="text" placeholder="city name">
+        </div>
+        <div class="youtube-container">
+            <input class="header-search" id="youtube-search" type="text" placeholder="youtube earch">
+        </div>
         <div class="weather-container"></div>
     </header>
 
     <main>
         <article class="github-container"></article>
-        <article class="github-search-container"></article>
+        <article class="github-center"></article>
         <article class="right-side">
             <div class="right-side-wrapper">
-                <!-- <form action=""> --> <!-- form resets page and prevents data loading -->
-                    <input id="gh-search" type="text" placeholder="Search for users"> 
+                <div class="form-alternative"> <!-- form resets page and prevents data loading -->
+                    <input id="gh-search" type="text" placeholder="Search for users" type="submit"> 
                     <button id="gh-submit">Send</button>
-                <!-- </form> -->
+                </div>
                 <div class="gh-search-result">
 
                 </div>

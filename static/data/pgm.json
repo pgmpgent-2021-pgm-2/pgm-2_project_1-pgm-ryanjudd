@@ -3,8 +3,8 @@
     "name": "Ryan",
     "familyName": "Judd",
     "email": "ryan.random@random.com",
-    "thumbnail": "string to thumbnail here",
-    "lifeMotto": "random string here",
+    "thumbnail": "https://avatars1.githubusercontent.com/u/71324647?s=460&v=4",
+    "motto": "random string here",
     "portfolio": {
       "githubUsername": "pgm-ryanjudd",
       "linkedInUsername": "Ryan Judd"
@@ -17,8 +17,8 @@
     "name": "Bram",
     "familyName": "Criel",
     "email": "bram.random@random.com",
-    "thumbnail": "string to thumbnail here",
-    "lifeMotto": "random string here",
+    "thumbnail": "https://avatars2.githubusercontent.com/u/71282872?s=460&v=4",
+    "motto": "random string here",
     "portfolio": {
       "githubUsername": "pgm-bramcriel",
       "linkedInUsername": "Bram Criel"
@@ -31,11 +31,11 @@
     "name": "Silke",
     "familyName": "Van Meerbeek",
     "email": "silke.random@random.com",
-    "thumbnail": "string to thumbnail here",
-    "lifeMotto": "random string here",
+    "thumbnail": "https://avatars3.githubusercontent.com/u/71274682?s=460&u=f581f5a9d7a36c393e8474f11ec2e9c66d6da1b9&v=4",
+    "motto": "random string here",
     "portfolio": {
-      "githubUsername": "pgm-silke",
-      "linkedInUsername": "Silke"
+      "githubUsername": "pgm-silkvanm1",
+      "linkedInUsername": "Silke Van Meerbeek"
     },
     "Student": true,
     "Birthday": 922143600
@@ -43,77 +43,64 @@
   {
     "name": "Philipe",
     "familyName": "De Pauw",
-    "email": "philipe.random@random.com",
-    "thumbnail": "string to thumbnail here",
-    "lifeMotto": "random string here",
+    "email": "drdynscript@gmail.com",
+    "thumbnail": "https://avatars1.githubusercontent.com/u/390219?s=460&u=a5c092182f76efb479ab17d4302b47676c4a3faf&v=4",
+    "motto": "random string here",
     "portfolio": {
-      "githubUsername": "pgm-philipe",
-      "linkedInUsername": "Philipe De Pauw"
+      "githubUsername": "drdynscript",
+      "linkedInUsername": "Philipe De Pauw - Waterschoot"
+    },
+    "Student": false,
+    "Birthday": 922143600
+  },
+  {
+    "name": "Bram",
+    "familyName": "Vandenbussche",
+    "email": "bramvand2.random@random.com",
+    "thumbnail": "https://avatars3.githubusercontent.com/u/71269925?s=460&u=63c1a9d61608cb83ad6b4924f5d57405c8362edd&v=4",
+    "motto": "random string here",
+    "portfolio": {
+      "githubUsername": "pgm-bramvand2",
+      "linkedInUsername": "Bram Vandenbussche"
     },
     "Student": true,
     "Birthday": 922143600
   },
   {
-    "name": "Mathiu",
-    "familyName": "Judd",
-    "email": "ryan.random@random.com",
-    "thumbnail": "string to thumbnail here",
-    "lifeMotto": "random string here",
+    "name": "Mina",
+    "familyName": "Jaidane",
+    "email": "mina.random@random.com",
+    "thumbnail": "https://avatars3.githubusercontent.com/u/71324864?s=460&v=4",
+    "motto": "random string here",
     "portfolio": {
-      "githubUsername": "pgm-ryanjudd",
-      "linkedInUsername": "Ryan Judd"
+      "githubUsername": "pgm-minajaid",
+      "linkedInUsername": "Mina Jaidane"
     },
     "Student": true,
     "Birthday": 922143600
   },
   {
-    "name": "Ryan",
-    "familyName": "Judd",
-    "email": "ryan.random@random.com",
-    "thumbnail": "string to thumbnail here",
-    "lifeMotto": "random string here",
+    "name": "Khomchan",
+    "familyName": "Phothichak",
+    "email": "Khomchan.random@random.com",
+    "thumbnail": "https://avatars1.githubusercontent.com/u/72610909?s=460&v=4",
+    "motto": "random string here",
     "portfolio": {
-      "githubUsername": "pgm-ryanjudd",
-      "linkedInUsername": "Ryan Judd"
+      "githubUsername": "Dev-Khomchan",
+      "linkedInUsername": "Khomchan Phothichak"
     },
     "Student": true,
     "Birthday": 922143600
   },
   {
-    "name": "Ryan",
-    "familyName": "Judd",
-    "email": "ryan.random@random.com",
-    "thumbnail": "string to thumbnail here",
-    "lifeMotto": "random string here",
+    "name": "Dylan",
+    "familyName": "Garcia Calero",
+    "email": "Dylan.random@random.com",
+    "thumbnail": "https://avatars2.githubusercontent.com/u/71270408?s=460&v=4",
+    "motto": "random string here",
     "portfolio": {
-      "githubUsername": "pgm-ryanjudd",
-      "linkedInUsername": "Ryan Judd"
-    },
-    "Student": true,
-    "Birthday": 922143600
-  },
-  {
-    "name": "Ryan",
-    "familyName": "Judd",
-    "email": "ryan.random@random.com",
-    "thumbnail": "string to thumbnail here",
-    "lifeMotto": "random string here",
-    "portfolio": {
-      "githubUsername": "pgm-ryanjudd",
-      "linkedInUsername": "Ryan Judd"
-    },
-    "Student": true,
-    "Birthday": 922143600
-  },
-  {
-    "name": "Ryan",
-    "familyName": "Judd",
-    "email": "ryan.random@random.com",
-    "thumbnail": "string to thumbnail here",
-    "lifeMotto": "random string here",
-    "portfolio": {
-      "githubUsername": "pgm-ryanjudd",
-      "linkedInUsername": "Ryan Judd"
+      "githubUsername": "DylanGarciaCalero",
+      "linkedInUsername": "Dylan Garcia Calero"
     },
     "Student": true,
     "Birthday": 922143600
