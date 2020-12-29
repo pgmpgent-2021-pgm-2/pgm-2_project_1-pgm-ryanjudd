@@ -14,8 +14,12 @@
       this.$ghInput = document.querySelector('#gh-search');
       this.$ghSubmit = document.querySelector('#gh-submit');
       this.$ghCenter = document.querySelector('.github-center');
-      this.$timeContainer = document.querySelector('.time-container');
+      this.$timeWrapper = document.querySelector('.time-wrapper');
       this.$youtubeContainer = document.querySelector('.youtube-container');
+      this.$citySearch = document.querySelector('#city-search');
+      this.$citySend = document.querySelector('#city-send');
+      this.$youtubeSearch = document.querySelector('#youtube-search');
+      
     },
 
     async loadServices() {
@@ -31,7 +35,6 @@
     },
 
     updateWeather(weather) {
-      console.log(weather.name);
       this.$weatherContainer.innerHTML = `<h3>${weather.current.temp_c} °C</h3> <img src="${weather.current.condition.icon}" alt="">`;
     },
 
@@ -104,16 +107,34 @@
       });
     },
 
-    async onClickEvents() {
+    onClickEvents() {
       this.$ghSubmit.addEventListener("click", async () => {
-        this.ghSearchFromServices(await GithubApi(await this.$ghInput.value))
+        this.ghSearchFromServices(await GithubApi(await this.$ghInput.value));
       });
 
       this.$ghInput.addEventListener("keyup", async (key) => {
         if (key.keyCode === 13) {
-          this.ghSearchFromServices(await GithubApi(await this.$ghInput.value))
+          this.ghSearchFromServices(await GithubApi(await this.$ghInput.value));
         };
       });
+
+      this.$youtubeSearch.addEventListener("keyup", (key) => {
+        if (key.keyCode === 13) {
+          console.log('ITS WORKING');
+        };
+      });
+
+      this.$citySearch.addEventListener("keyup", async (key) => {
+        if (key.keyCode === 13) {
+          this.updateUTCTime(await this.$citySearch.value);
+        };
+      });
+
+      this.$citySend.addEventListener("click", async () => {
+        this.updateUTCTime(await this.$citySearch.value);
+      });
+
+
     },
 
     ghSearchFromServices(github) {
@@ -177,11 +198,19 @@
     },
 
     utcTimeFill(weather) {
-      console.log(weather.location.localtime_epoch);
+      const time = new Date(weather.location.localtime_epoch * 1000);
+      console.log(time.toUTCString());
 
-      this.$timeContainer.innerHTML += `<h3>${weather.location.localtime_epoch}</h3>`;
+      this.$timeWrapper.innerHTML = `<h3>${time.toUTCString()}</h3>`;
     },
 
+    async updateUTCTime(city){
+      const weather = await WeatherApi(city);
+      const time = new Date(weather.location.localtime_epoch*1000);
+
+      this.$timeWrapper.innerHTML = `<h3>${time.toUTCString()}</h3>`;
+      
+    },
   }
   app.initialize();
 })()
