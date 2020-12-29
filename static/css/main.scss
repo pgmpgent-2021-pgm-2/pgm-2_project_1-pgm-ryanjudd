@@ -3,7 +3,7 @@ $colour2: #292929;
 $colour3: #616161;
 $colour4: #BB86FC;
 $colour5: #f0f0f0dd;
-$colour6: #ffffff43;
+$colour6: #a6a5a543;
 
 * {
   margin: 0;
@@ -169,6 +169,16 @@ header {
   a {
     color: #fff;
     text-decoration: $colour3;
+  }
+}
+
+.youtube-item {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  
+  img {
+    order: -1;
   }
 }
 

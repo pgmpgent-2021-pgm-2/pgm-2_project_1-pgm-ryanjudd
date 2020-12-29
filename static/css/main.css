@@ -193,13 +193,28 @@ header {
           text-decoration: #616161;
 }
 
+.youtube-item {
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.youtube-item img {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
 .light-body {
   background-color: #f0f0f0dd;
   color: #000;
 }
 
 .light {
-  background-color: #ffffff43;
+  background-color: #a6a5a543;
 }
 
 .light a {

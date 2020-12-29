@@ -1,7 +1,7 @@
 async function WeatherApi(city) {
   // this.getCurrentWeather = async () => {
     
-    const WEATHER_API = `http://api.weatherapi.com/v1/current.json?key=4f49bbe7048d41d7b12142024202112&q=${city}`;
+    const WEATHER_API = `https://api.weatherapi.com/v1/current.json?key=4f49bbe7048d41d7b12142024202112&q=${city}`;
     try {
       const response = await fetch(WEATHER_API);
       json = await response.json();
@@ -69,5 +69,18 @@ async function GithubFollowersApi(name) {
     return json;
   } catch (error) {
     console.error(error);
+  }
+};
+
+async function YoutubeApi(search) {
+  const key1 = 'AIzaSyAsN26PtACDKVFOQy1flJnfNEx-g6Q6xZ8';
+  const YOUTUBE_API = `https://www.googleapis.com/youtube/v3/search?key=${key1}&part=snippet&maxResults=20&q=${search}`;
+
+  try {
+    const response = await fetch(YOUTUBE_API);
+    json = await response.json();
+    return json;
+  } catch (error) {
+    console.log(error);
   }
 };

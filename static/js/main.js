@@ -121,12 +121,6 @@
         };
       });
 
-      this.$youtubeSearch.addEventListener("keyup", (key) => {
-        if (key.keyCode === 13) {
-          console.log('ITS WORKING');
-        };
-      });
-
       this.$citySearch.addEventListener("keyup", async (key) => {
         if (key.keyCode === 13) {
           this.updateUTCTime(await this.$citySearch.value);
@@ -139,7 +133,13 @@
 
       this.$themeSwap.addEventListener("click", () => {
         this.swapThemes();
-      })
+      });
+
+      this.$youtubeSearch.addEventListener("keyup", (key) => {
+        if (key.keyCode === 13) {
+          this.updateYoutube(this.$youtubeSearch.value);
+        };
+      });
     },
 
     ghSearchFromServices(github) {
@@ -218,7 +218,6 @@
     },
 
     swapThemes() {
-
       if (this.$body.classList.contains('light-body')) {
         this.$body.classList.remove('light-body');
         this.$githubContainer.classList.remove('light');
@@ -230,6 +229,25 @@
         this.$rightSide.classList.add('light')
         this.$ghCenter.classList.add('light');
       }
+    },
+
+    async updateYoutube(search) {
+      const YT = await YoutubeApi(search)
+      console.log(YT.items);
+      let str = "";
+
+      YT.items.forEach(element => {
+        str += `
+        <div class="youtube-item">
+          <a href="https://www.youtube.com/watch?v=${element.id.videoId}&ab_channel=${element.snippet.channelId}">
+            <h3>${element.snippet.title}</h3>
+            <img src="${element.snippet.thumbnails.default.url}"></img>
+          </a>
+        </div>
+        `;
+      });
+
+      this.$ghCenter.innerHTML = str;
     }
   }
   app.initialize();
