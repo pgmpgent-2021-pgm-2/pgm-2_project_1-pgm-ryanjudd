@@ -49,7 +49,7 @@ async function GithubApi(name) {
 };
 
 async function GithubRepositoryApi(name) {
-  const REPOSITORY_API = `https://api.github.com/users/${name}/repos?page=1&per_page=1`;
+  const REPOSITORY_API = `https://api.github.com/users/${name}/repos?page=1&per_page=30`;
 
   try {
     const response = await fetch(REPOSITORY_API);
@@ -61,7 +61,7 @@ async function GithubRepositoryApi(name) {
 };
 
 async function GithubFollowersApi(name) {
-  const FOLLOWERS_API = `https://api.github.com/users/${name}/followers?page=1&per_page=1`;
+  const FOLLOWERS_API = `https://api.github.com/users/${name}/followers?page=1&per_page=30`;
 
   try {
     const response = await fetch(FOLLOWERS_API);
